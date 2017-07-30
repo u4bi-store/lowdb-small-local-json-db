@@ -49,6 +49,12 @@ console.log('items filter', db.get('items')
 
 /* map
 */
-console.log(db.get('users')
+console.log('users map' ,db.get('users')
     .map('name')
     .value());
+
+
+/* get object path
+*/
+console.log('users[0]', db.get('users[0]').value());
+console.log('users[0].name', db.get('users[0].name').value());
