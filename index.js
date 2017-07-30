@@ -79,3 +79,11 @@ console.log('remove', db.get('items')
   .remove({ name: 'box' })
   .write());
 console.log('items' ,db.get('items').value());
+
+
+/* push
+*/
+console.log('push', db.get('users')
+    .push({ name : 'Fan' , age : 15 })
+    .write());
+console.log(db.get('users').value());
