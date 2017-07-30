@@ -67,9 +67,15 @@ console.log('find', db.get('users')
 
 /* assign : update
 */
-console.log('assign',db.get('users')
+console.log('assign', db.get('users')
     .find({ id : 1})
     .assign({ name : 'Dan'})
     .write());
-    
 console.log(db.get('users[0].name').value());
+
+/* remove
+*/
+console.log('remove', db.get('items')
+  .remove({ name: 'box' })
+  .write());
+console.log('items' ,db.get('items').value());
