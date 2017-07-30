@@ -16,31 +16,46 @@
             db.setState({
                 users : {
                     '2017-7-13' : [
-                        { cash : 1000, content : 'test', datetime : '20:52' },
+                        { cash : 5000, content : 'test 1', datetime : '20:52' },
 
-                        { cash : 1000, content : 'test', datetime : '20:52' },
+                        { cash : 4000, content : 'test 2', datetime : '20:52' },
 
-                        { cash : 1000, content : 'test', datetime : '20:52' },
+                        { cash : 3000, content : 'test 3', datetime : '20:52' },
 
-                        { cash : 1000, content : 'test', datetime : '20:52' },
+                        { cash : 2000, content : 'test 4', datetime : '20:52' },
 
-                        { cash : 1000, content : 'test', datetime : '20:52' }
+                        { cash : 1000, content : 'test 5', datetime : '20:52' }
                     ],
                     '2017-7-14' : [
-                        { cash : 1000, content : 'test', datetime : '20:52' },
+                        { cash : 5000, content : 'test 1', datetime : '20:52' },
 
-                        { cash : 1000, content : 'test', datetime : '20:52' },
+                        { cash : 4000, content : 'test 2', datetime : '20:52' },
 
-                        { cash : 1000, content : 'test', datetime : '20:52' },
+                        { cash : 3000, content : 'test 3', datetime : '20:52' },
 
-                        { cash : 1000, content : 'test', datetime : '20:52' },
+                        { cash : 2000, content : 'test 4', datetime : '20:52' },
 
-                        { cash : 1000, content : 'test', datetime : '20:52' }
+                        { cash : 1000, content : 'test 5', datetime : '20:52' }
                     ]
                 }
             });
 
             console.log(db.getState());
+
+
+
+            console.log(db.get('users.[2017-7-13]').value() );
+
+            console.log(db.get('users.[2017-7-13][0]').value() );
+
+            console.log(db.get('users.[2017-7-13][0].cash').value() );
+
+            console.log(
+                db.get('users.[2017-7-13]')
+                    .sortBy('cash')
+                    .take(3)
+                    .value()
+            );
 
         </script>
     </body>
