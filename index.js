@@ -5,15 +5,15 @@ console.log(db);
 
 var data = {
     users : [
-        { name : 'Jan', age : 16 },
+        { id : 1, name : 'Jan', age : 16 },
 
-        { name : 'Ben', age : 16 },
+        { id : 2, name : 'Ben', age : 16 },
 
-        { name : 'Han', age : 16 },
+        { id : 3, name : 'Han', age : 16 },
 
-        { name : 'San', age : 17 },
+        { id : 4, name : 'San', age : 17 },
 
-        { name : 'Kan', age : 17 }
+        { id : 5, name : 'Kan', age : 17 }
         
     ],
 
@@ -58,3 +58,9 @@ console.log('users map' ,db.get('users')
 */
 console.log('users[0]', db.get('users[0]').value());
 console.log('users[0].name', db.get('users[0].name').value());
+
+/* find
+*/
+console.log('find', db.get('users')
+    .find({ id : 1 })
+    .value());
