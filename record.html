@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> record </title>
+        
+        <script src="https://unpkg.com/lodash@4/lodash.min.js"></script>
+        <script src="https://unpkg.com/lowdb/dist/lowdb.min.js"></script>
+
+    </head>
+    <body>
+
+        <script>
+            var db = low('record');
+            
+            db.setState({
+                users : {
+                    '2017-7-13' : [
+                        { cash : 1000, content : 'test', datetime : '20:52' },
+
+                        { cash : 1000, content : 'test', datetime : '20:52' },
+
+                        { cash : 1000, content : 'test', datetime : '20:52' },
+
+                        { cash : 1000, content : 'test', datetime : '20:52' },
+
+                        { cash : 1000, content : 'test', datetime : '20:52' }
+                    ],
+                    '2017-7-14' : [
+                        { cash : 1000, content : 'test', datetime : '20:52' },
+
+                        { cash : 1000, content : 'test', datetime : '20:52' },
+
+                        { cash : 1000, content : 'test', datetime : '20:52' },
+
+                        { cash : 1000, content : 'test', datetime : '20:52' },
+
+                        { cash : 1000, content : 'test', datetime : '20:52' }
+                    ]
+                }
+            });
+
+            console.log(db.getState());
+
+        </script>
+    </body>
+</html>
