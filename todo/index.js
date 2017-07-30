@@ -57,7 +57,9 @@ function createTodo(id, value){
 }
 
 function removeTodo(e){
-    console.log(e.target.dataset.id);
-    
+    var id =  parseInt(e.target.dataset.id);
+
+    todoList.remove({ id : id }).write();
+
     e.target.parentElement.removeChild(this);
 }
