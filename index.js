@@ -34,3 +34,5 @@ var data = {
 db.setState(data);
 
 console.log(db.getState());
+
+console.log('items data ' , db.get('items').value());
