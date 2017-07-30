@@ -5,15 +5,15 @@ console.log(db);
 
 var data = {
     users : [
-        { name : 'test', age : 16 },
+        { name : 'Jan', age : 16 },
 
-        { name : 'test', age : 16 },
+        { name : 'Ben', age : 16 },
 
-        { name : 'test', age : 16 },
+        { name : 'Han', age : 16 },
 
-        { name : 'test', age : 17 },
+        { name : 'San', age : 17 },
 
-        { name : 'test', age : 17 }
+        { name : 'Kan', age : 17 }
         
     ],
 
@@ -44,4 +44,11 @@ console.log('items filter', db.get('items')
     .filter({ name : 'box' })
     .sortBy('price')
     // .take(2)
+    .value());
+
+
+/* map
+*/
+console.log(db.get('users')
+    .map('name')
     .value());
