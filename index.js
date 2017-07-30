@@ -87,3 +87,7 @@ console.log('push', db.get('users')
     .push({ name : 'Fan' , age : 15 })
     .write());
 console.log(db.get('users').value());
+
+/* size
+*/
+console.log(db.get('users').size().value());
