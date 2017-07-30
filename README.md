@@ -1,0 +1,1 @@
+- **lowdb** : lowdb is a small local JSON database powered by lodash [https://github.com/typicode/lowdb](https://github.com/typicode/lowdb)
