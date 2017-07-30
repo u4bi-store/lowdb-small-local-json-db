@@ -2,6 +2,13 @@ var db = low('db');
 
 console.log(db);
 
+db.defaults({
+    users: [],
+    items : [],
+    record : []
+}).write();
+
+console.log(db.getState());
 
 var data = {
     users : [
@@ -31,7 +38,7 @@ var data = {
    ]
 };
 
-// db.setState(data);
+db.setState(data);
 
 console.log(db.getState());
 
