@@ -18,15 +18,15 @@ var data = {
     ],
 
    items : [
-       { name : 'box', price : 400 },
+       { name : 'box', price : 300 },
 
-       { name : 'box', price : 400 },
+       { name : 'box', price : 200 },
 
-       { name : 'box', price : 400 },
+       { name : 'box', price : 100 },
 
-       { name : 'box', price : 500 },
+       { name : 'weapon', price : 500 },
 
-       { name : 'box', price : 500 }
+       { name : 'weapon', price : 500 }
        
    ]
 };
@@ -36,3 +36,12 @@ db.setState(data);
 console.log(db.getState());
 
 console.log('items data ' , db.get('items').value());
+
+
+/* filter
+*/
+console.log('items filter', db.get('items')
+    .filter({ name : 'box' })
+    .sortBy('price')
+    // .take(2)
+    .value());
